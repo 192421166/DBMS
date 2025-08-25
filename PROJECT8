@@ -1,0 +1,33 @@
+USE CompanyDB;
+
+SELECT ProductID, Price
+FROM Product
+WHERE Price BETWEEN 50 AND 100;
+
+SELECT ProductID, Price
+FROM Product
+WHERE Price BETWEEN 10 AND 500;
+
+SELECT EmpName, DeptID
+FROM Employee
+WHERE DeptID IN (1, 2);
+
+SELECT EmpName, DeptID
+FROM Employee
+WHERE DeptID IN (2, 3);
+
+
+SELECT AVG(Price) AS AvgPrice
+FROM Product;
+
+SELECT MAX(Price) AS MaxPrice
+FROM Product;
+
+SELECT MIN(Price) AS MinPrice
+FROM Product;
+
+SELECT SUM(Price) AS TotalPrice
+FROM Product;
+
+SELECT COUNT(*) AS EmployeeCount
+FROM Employee;
