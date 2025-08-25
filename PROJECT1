@@ -1,0 +1,19 @@
+CREATE DATABASE IF NOT EXISTS CollegeDB;
+USE CollegeDB;
+DROP TABLE IF EXISTS Student;
+CREATE TABLE Student (
+    RollNo INT PRIMARY KEY,
+    Name VARCHAR(50),
+    Age INT
+);
+ALTER TABLE Student ADD Email VARCHAR(100);
+INSERT INTO Student (RollNo, Name, Age, Email)
+VALUES
+(1, 'lokesh', 21, 'lokesh@example.com'),
+(2, 'dilip', 18, 'dilip@example.com'),
+(3, 'sanjay', 17, 'sanjay@example.com');
+SELECT * FROM Student;
+TRUNCATE TABLE Student;
+SELECT * FROM Student;
+DROP TABLE IF EXISTS Student;
+SHOW TABLES;
