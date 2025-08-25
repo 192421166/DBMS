@@ -1,0 +1,11 @@
+USE CompanyDB;
+
+CREATE USER IF NOT EXISTS 'user1'@'localhost' IDENTIFIED BY 'password123';
+
+GRANT SELECT, INSERT ON Department TO 'user1'@'localhost';
+
+SHOW GRANTS FOR 'user1'@'localhost';
+
+REVOKE INSERT ON Department FROM 'user1'@'localhost';
+
+SHOW GRANTS FOR 'user1'@'localhost';
