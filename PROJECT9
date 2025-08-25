@@ -1,0 +1,28 @@
+USE CompanyDB;
+SELECT DeptID, COUNT(*) AS EmployeeCount
+FROM Employee
+GROUP BY DeptID;
+SELECT DeptID, AVG(Salary) AS AvgSalary
+FROM Employee
+GROUP BY DeptID;
+SELECT DeptID, COUNT(*) AS EmployeeCount
+FROM Employee
+GROUP BY DeptID
+HAVING COUNT(*) > 1;
+SELECT DeptID, AVG(Salary) AS AvgSalary
+FROM Employee
+GROUP BY DeptID
+HAVING AVG(Salary) > 50000;
+
+SELECT EmpName, Salary
+FROM Employee
+ORDER BY Salary ASC;
+
+SELECT EmpName, Salary
+FROM Employee
+ORDER BY Salary DESC;
+
+SELECT DeptID, COUNT(*) AS EmployeeCount
+FROM Employee
+GROUP BY DeptID
+ORDER BY EmployeeCount DESC;
