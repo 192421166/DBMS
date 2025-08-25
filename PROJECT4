@@ -1,0 +1,53 @@
+CREATE DATABASE IF NOT EXISTS CompanyDB;
+USE CompanyDB;
+
+DROP TABLE IF EXISTS Employee;
+DROP TABLE IF EXISTS Department;
+
+CREATE TABLE Department (
+    DeptID INT PRIMARY KEY,
+    DeptName VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE Employee (
+    EmpID INT PRIMARY KEY,
+    EmpName VARCHAR(50) NOT NULL,
+    DeptID INT,
+    FOREIGN KEY (DeptID) REFERENCES Department(DeptID)
+);
+
+
+INSERT INTO Department (DeptID, DeptName) VALUES 
+(1, 'Computer Science'),
+(2, 'Information Technology'),
+(3, 'Mechanical Engineering');
+
+INSERT INTO Employee (EmpID, EmpName, DeptID) VALUES 
+(101, 'Alice', 1),
+(102, 'Bob', 2),
+(103, 'Charlie', 1),
+(104, 'David', 3);
+
+
+UPDATE Employee
+SET EmpName = 'Alicia'
+WHERE EmpID = 101;
+
+UPDATE Employee
+SET DeptID = 2
+WHERE DeptID = 1;
+
+SELECT * FROM Employee;
+
+
+DELETE FROM Employee
+WHERE EmpID = 102;
+
+DELETE FROM Employee
+WHERE DeptID = 3;
+
+SELECT * FROM Employee;
+
+DELETE FROM Employee;
+
+SELECT * FROM Employee;
