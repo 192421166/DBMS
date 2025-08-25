@@ -1,0 +1,16 @@
+USE CompanyDB;
+SELECT EmpName
+FROM Employee
+WHERE DeptID = 1;
+SELECT EmpName
+FROM Employee
+WHERE DeptID = 2;
+SELECT EmpName
+FROM Employee
+WHERE EmpName LIKE 'A%';
+SELECT EmpName
+FROM Employee
+WHERE EmpName LIKE '%e';
+SELECT EmpName
+FROM Employee
+WHERE EmpName LIKE '%li%';
